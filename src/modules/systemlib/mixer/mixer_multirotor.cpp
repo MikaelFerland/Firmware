@@ -97,6 +97,9 @@ MultirotorMixer::MultirotorMixer(ControlCallback control_cb,
 
 MultirotorMixer::~MultirotorMixer()
 {
+	if (_rotors != nullptr) {
+		delete _rotors;
+	}
 }
 
 MultirotorMixer *
